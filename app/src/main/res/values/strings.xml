@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Shuffl</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_anirudh">Hello Anirudh!!</string>
+    <string name="title_activity_spare">spareActivity</string>
+</resources>
