@@ -2,6 +2,7 @@ package com.example.del.shuffl;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,11 +19,15 @@ import android.widget.Toast;
 public class MainActivity extends Activity  {
 
     TextView t;
+    EditText name;
+    EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
         t=(TextView)findViewById(R.id.textToast);
+        name=(EditText)findViewById(R.id.nameEt);
+        password=(EditText)findViewById(R.id.passwordEt);
 
     }
     public void doStuff(View v){
@@ -56,7 +62,22 @@ public class MainActivity extends Activity  {
             intent.putExtra(Intent.EXTRA_STREAM,uri);
             chooser=Intent.createChooser(intent,"select app");
             startActivity(chooser);
+
         }
 
     }
+   public void sharedPref(View v){
+       SharedPreferences sf = getSharedPreferences("TestData", MODE_PRIVATE);
+
+
+           SharedPreferences.Editor editor = sf.edit();
+            editor.putString("name",name.getText().toString());
+           editor.putString("password",password.getText().toString());
+            editor.commit();
+           Intent intent = new Intent(this,Shared_pref_test.class);
+          startActivity(intent);
+
+
+
+   }
 }
