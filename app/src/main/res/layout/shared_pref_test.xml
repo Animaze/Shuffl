@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <Button
+        android:id="@+id/loadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loadSharedPref"
+        android:text="Load Details" />
+    <Button
+        android:id="@+id/previousFromSharedPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loadSharedPref"
+        android:text="Previous" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/loadedName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Name        :"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/loadedPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Password  :"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/passwordEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="5
+            "/>
+    </LinearLayout>
+
+
+</LinearLayout>

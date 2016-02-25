@@ -1,6 +1,7 @@
 package com.example.del.shuffl;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,16 +20,22 @@ public class Shared_pref_test extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shared_pref_test);
-        nameLoad=(EditText)findViewById(R.id.nameEt);
-        passwordLoad=(EditText)findViewById(R.id.passwordEt);
+        nameLoad = (EditText) findViewById(R.id.nameEt);
+        passwordLoad = (EditText) findViewById(R.id.passwordEt);
 
 
     }
 
-    public void loadSharedPref(View v){
-        SharedPreferences sf =getSharedPreferences("TestData",MODE_PRIVATE);
-        nameLoad.setText(sf.getString("name","default"));
-        passwordLoad.setText(sf.getString("password","default"));
+    public void loadSharedPref(View v) {
+        if (v.getId() == R.id.loadBtn) {
+            SharedPreferences sf = getSharedPreferences("TestData", MODE_PRIVATE);
+            nameLoad.setText(sf.getString("name", "default"));
+            passwordLoad.setText(sf.getString("password", "default"));
+        }
+        if (v.getId() == R.id.previousFromSharedPreferences) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 
 }
