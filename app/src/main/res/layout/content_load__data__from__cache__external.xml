@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextLoadDataFromCacheSdEtc"
+        android:layout_weight="1" />
+</LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load from Internal Cache"
+        android:id="@+id/loadButtonInternalCache"
+        android:onClick="loadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load from External Cache"
+        android:id="@+id/loadButtonExternalCache"
+        android:onClick="loadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load from public Directory"
+        android:id="@+id/loadButtonExternalPublicDirectory"
+        android:onClick="loadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load from private Directory"
+        android:id="@+id/loadButtonExternalPrivateDirectory"
+        android:onClick="loadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous to Upload"
+        android:id="@+id/previousToCacheExternalFile"
+        android:onClick="loadDataToCacheOrSd"/>
+
+
+</LinearLayout>

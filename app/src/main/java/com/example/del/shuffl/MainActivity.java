@@ -101,6 +101,7 @@ public class MainActivity extends Activity {
         }
         finally{
             try {
+                if(fos!=null)
                 fos.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -109,5 +110,9 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, File_Storage.class);
         startActivity(intent);
 
+    }
+    public void storage(View v){
+        Intent intent = new Intent(this, Cache_External.class);
+        startActivity(intent);
     }
 }

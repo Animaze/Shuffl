@@ -91,4 +91,11 @@
         android:layout_height="wrap_content"
         android:onClick="fileStorageUpload"
         android:text="Upload Details to Files" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Storage Functionalities"
+        android:id="@+id/button"
+        android:onClick="storage"/>
 </LinearLayout>

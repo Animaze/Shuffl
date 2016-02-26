@@ -25,7 +25,15 @@
         <activity
             android:name=".File_Storage"
             android:label="@string/title_activity_file__storage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Cache_External"
+            android:label="@string/title_activity_cache__external"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Load_Data_From_Cache_External"
+            android:label="@string/title_activity_load__data__from__cache__external"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>

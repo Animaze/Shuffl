@@ -5,4 +5,7 @@
     <string name="title_activity_spare">spareActivity</string>
     <string name="title_activity_shared_pref_test">Shared_pref_test</string>
     <string name="title_activity_file__storage">File_Storage</string>
+    <string name="title_activity_cache__external">Cache_External</string>
+    <string name="title_activity_load__data__from__cache__external">Load_Data_From_Cache_External
+    </string>
 </resources>

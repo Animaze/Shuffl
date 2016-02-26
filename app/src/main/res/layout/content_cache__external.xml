@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextEnterTextForCacheSdEtc"
+        android:layout_weight="1
+        "
+        />
+</LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload in Internal Cache"
+        android:id="@+id/buttonInternalCache"
+        android:onClick="uploadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload in External Cache"
+        android:id="@+id/buttonExternalCache"
+        android:onClick="uploadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload as public Directory"
+        android:id="@+id/buttonExternalPublicDirectory"
+        android:onClick="uploadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload as private Directory"
+        android:id="@+id/buttonExternalPrivateDirectory"
+        android:onClick="uploadDataToCacheOrSd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Move To Next Screen"
+        android:id="@+id/moveToLoadDataFromCacheOrSd"
+        android:onClick="uploadDataToCacheOrSd"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous to Main Screen"
+        android:id="@+id/previousFromCacheExternalFile"
+        android:onClick="uploadDataToCacheOrSd"/>
+</LinearLayout>
