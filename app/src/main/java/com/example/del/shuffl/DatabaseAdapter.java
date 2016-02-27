@@ -2,6 +2,7 @@ package com.example.del.shuffl;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -23,6 +24,21 @@ public class DatabaseAdapter {
         contentValues.put(DatabaseHelper.PASSWORD,password);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         return db.insert(DatabaseHelper.TABLE_NAME,null,contentValues);
+    }
+
+    public String loadData() {
+
+        StringBuffer sb = new StringBuffer();
+        String[] columns ={DatabaseHelper.UID,DatabaseHelper.USERNAME,DatabaseHelper.PASSWORD};
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        Cursor cursor = db.query(DatabaseHelper.TABLE_NAME, columns, null, null, null, null, null);
+        int index0 =cursor.getColumnIndex(DatabaseHelper.UID);
+        int index1 =cursor.getColumnIndex(DatabaseHelper.USERNAME);
+        int index2 =cursor.getColumnIndex(DatabaseHelper.PASSWORD);
+        while(cursor.moveToNext()){
+        sb.append(cursor.getInt(index0)+" "+cursor.getString(index1)+" "+cursor.getString(index2)+"\n");
+        }
+       return sb.toString();
     }
 
     static class DatabaseHelper extends SQLiteOpenHelper{

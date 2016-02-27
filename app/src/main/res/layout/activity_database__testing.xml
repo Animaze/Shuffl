@@ -47,5 +47,12 @@
         android:onClick="addUserToDb"
         android:text="Add User to Database" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Details From Db"
+        android:onClick="addUserToDb"
+        android:id="@+id/loadDataFromDb" />
+
 </LinearLayout>
 

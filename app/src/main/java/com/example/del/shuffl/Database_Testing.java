@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Database_Testing extends AppCompatActivity {
     EditText username;
@@ -23,13 +24,19 @@ public class Database_Testing extends AppCompatActivity {
     }
 
     public void addUserToDb(View v) {
-        String usernameDb = username.getText().toString();
-        String passwordDb = password.getText().toString();
-        long id = da.addUser(usernameDb,passwordDb);
-        if(id==-1){
-            Log.d("DB","Sorry, some internal error occured , unable to add user to Db");
-        }else{
-            Log.d("DB","User added successfully");
+        if(v.getId()==R.id.uploadToDb) {
+            String usernameDb = username.getText().toString();
+            String passwordDb = password.getText().toString();
+            long id = da.addUser(usernameDb, passwordDb);
+            if (id == -1) {
+                Log.d("DB", "Sorry, some internal error occured , unable to add user to Db");
+            } else {
+                Log.d("DB", "User added successfully");
+            }
+        }
+        if(v.getId()==R.id.loadDataFromDb){
+            String data = da.loadData();
+            Toast.makeText(this,data,Toast.LENGTH_LONG).show();
         }
     }
 
