@@ -47,12 +47,84 @@
         android:onClick="addUserToDb"
         android:text="Add User to Database" />
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TvDbOldUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Old Username   :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+        <EditText
+            android:id="@+id/EtDbOldUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TvDbNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Password   : "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/EtDbNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
     <Button
+        android:id="@+id/updateDb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="alterDb"
+        android:text="Update Database" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvIdToBeDeleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Recored for deletion: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etIdToBeDeleted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/deleteFromDb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="alterDb"
+        android:text="Delete Entry" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Load Details From Db"
         android:onClick="addUserToDb"
-        android:id="@+id/loadDataFromDb" />
+        android:id="@+id/loadDataFromDb"
+        android:layout_weight="1"/>
+</LinearLayout>
 
 </LinearLayout>
 

@@ -41,6 +41,21 @@ public class DatabaseAdapter {
        return sb.toString();
     }
 
+    public int updateData(String oldUsernameDb, String newPasswordDb) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(DatabaseHelper.PASSWORD,newPasswordDb);
+         return db.update(DatabaseHelper.TABLE_NAME,contentValues,DatabaseHelper.USERNAME+" = ?",new String[]{oldUsernameDb});
+    }
+
+    public int deleteEntry(String entryToBedeletedDb) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        return db.delete(DatabaseHelper.TABLE_NAME,DatabaseHelper.UID+" =? ",new String[]{entryToBedeletedDb});
+
+    }
+
+
     static class DatabaseHelper extends SQLiteOpenHelper{
         private static final String DATABASE_NAME = "AnirudhTestDb";
         private static final int DATABASE_VERSION = 2;
