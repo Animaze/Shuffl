@@ -3,6 +3,7 @@ package com.example.del.shuffl;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -115,4 +116,13 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, Cache_External.class);
         startActivity(intent);
     }
+    /*
+    SQLite Database Methods Start here
+     */
+    public void DbFunctions(View v){
+        Intent intent = new Intent(this, Database_Testing.class);
+        startActivity(intent);
+    }
+
+
 }

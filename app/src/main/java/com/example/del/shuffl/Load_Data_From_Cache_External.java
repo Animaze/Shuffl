@@ -21,7 +21,7 @@ public class Load_Data_From_Cache_External extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_load__data__from__cache__external);
+        setContentView(R.layout.content_load__data__from__cache__external);
         et = (EditText) findViewById(R.id.editTextLoadDataFromCacheSdEtc);
     }
 

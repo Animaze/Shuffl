@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.del.shuffl">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,7 +35,11 @@
         <activity
             android:name=".Load_Data_From_Cache_External"
             android:label="@string/title_activity_load__data__from__cache__external"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Database_Testing"
+            android:label="@string/title_activity_database__testing"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 </manifest>

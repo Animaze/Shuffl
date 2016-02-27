@@ -8,4 +8,5 @@
     <string name="title_activity_cache__external">Cache_External</string>
     <string name="title_activity_load__data__from__cache__external">Load_Data_From_Cache_External
     </string>
+    <string name="title_activity_database__testing">Database_Testing</string>
 </resources>

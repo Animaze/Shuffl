@@ -3,10 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/textView"
@@ -18,7 +15,7 @@
         android:id="@+id/toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="30dp"
         android:onClick="doStuff"
         android:text="Show Toast" />
 
@@ -85,6 +82,7 @@
         android:layout_height="wrap_content"
         android:onClick="sharedPref"
         android:text="Upload Details to Shared Preferences" />
+
     <Button
         android:id="@+id/upBtnToFiles"
         android:layout_width="wrap_content"
@@ -93,9 +91,16 @@
         android:text="Upload Details to Files" />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Storage Functionalities"
-        android:id="@+id/button"
-        android:onClick="storage"/>
+        android:onClick="storage"
+        android:text="Storage Functionalities" />
+
+    <Button
+        android:id="@+id/DbButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="DbFunctions"
+        android:text="Databzse Functionalities" />
 </LinearLayout>
